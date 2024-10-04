@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/core/Utils/colors_manager.dart';
+import 'package:quran_app/core/Utils/fonts_manager.dart';
 
 class MyTheme {
   static final ThemeData lightTheme = ThemeData(
@@ -12,7 +13,7 @@ class MyTheme {
           titleTextStyle: TextStyle(
             color: Colors.black,
             fontSize: 25,
-          )),
+              fontFamily: FontsManager.elmesiri)),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.white,
@@ -25,6 +26,9 @@ class MyTheme {
         showSelectedLabels: true,
         showUnselectedLabels: false,
       ),
+      bottomSheetTheme: BottomSheetThemeData(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
       dividerColor: ColorsManager.goldColor,
       textTheme: TextTheme(
         bodySmall: TextStyle(
@@ -32,7 +36,13 @@ class MyTheme {
           fontWeight: FontWeight.w400,
         ),
         titleSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
-      ),
+          displaySmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+          labelSmall: TextStyle(
+              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
+          bodyMedium: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+              color: ColorsManager.goldColor)),
       cardTheme: CardTheme(
         margin: EdgeInsets.all(9),
         elevation: 13,
