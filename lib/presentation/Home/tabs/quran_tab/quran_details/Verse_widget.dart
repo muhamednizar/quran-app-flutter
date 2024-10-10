@@ -15,7 +15,7 @@ class VerseWidget extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(VerseItem,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodySmall),
+              style: Theme.of(context).textTheme.bodyLarge),
         ),
       ),
     );

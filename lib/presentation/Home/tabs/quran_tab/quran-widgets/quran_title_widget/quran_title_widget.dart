@@ -1,16 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quran_app/core/Utils/colors_manager.dart';
 import 'package:quran_app/core/Utils/routes_manager.dart';
-import 'package:quran_app/presentation/Home/tabs/quran_tab/quran-widgets/quran_title_widget/chapter_name_widget.dart';
 
 class QuranTitleWidget extends StatelessWidget {
   String SuraTitle;
   String NumberOfVerses;
   int index;
 
-  QuranTitleWidget(
-      {super.key,
+  QuranTitleWidget({
+    super.key,
       required this.SuraTitle,
       required this.NumberOfVerses,
       required this.index});
@@ -35,7 +32,7 @@ class QuranTitleWidget extends StatelessWidget {
             )),
             Expanded(
                 child: VerticalDivider(
-              color: Theme.of(context).dividerColor,
+              color: Theme.of(context).primaryColor,
               width: 3,
               thickness: 3,
             )),

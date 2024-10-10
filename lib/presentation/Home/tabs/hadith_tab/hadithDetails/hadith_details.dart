@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_app/config/theme/my_theme.dart';
 import 'package:quran_app/presentation/Home/tabs/hadith_tab/hadith_tab.dart';
 
 import '../../../../../core/Utils/assets_manager.dart';
@@ -13,7 +14,10 @@ class HadithDetails extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(AssetsManager.lightMainBg), fit: BoxFit.fill)),
+              image: AssetImage(MyTheme.isDarkEnabled
+                  ? AssetsManager.darkMainBg
+                  : AssetsManager.lightMainBg),
+              fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
           title: Text(hadith.title),
@@ -26,7 +30,7 @@ class HadithDetails extends StatelessWidget {
               child: SingleChildScrollView(
                   child: Text(
                 hadith.Content,
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodyLarge,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
               ))),
