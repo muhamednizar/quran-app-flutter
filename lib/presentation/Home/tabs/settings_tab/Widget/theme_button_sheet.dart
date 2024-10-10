@@ -20,7 +20,6 @@ class ThemeButtonSheet extends StatelessWidget {
               Icon(
                 Icons.check,
                 size: 25,
-                color: Theme.of(context).primaryColor,
               )
             ],
           ),
@@ -30,9 +29,7 @@ class ThemeButtonSheet extends StatelessWidget {
           Text(
             'Dark',
             style: Theme.of(context)
-                .textTheme
-                .bodyMedium
-                ?.copyWith(color: Colors.black),
+                .textTheme.displayMedium,
           ),
         ],
       ),

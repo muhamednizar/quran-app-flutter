@@ -33,6 +33,7 @@ class ChapterNameWidget extends StatelessWidget {
             Expanded(
                 flex: 1,
                 child: VerticalDivider(
+                  color: Theme.of(context).primaryColor,
                   width: 2,
                   thickness: 3,
                 )),

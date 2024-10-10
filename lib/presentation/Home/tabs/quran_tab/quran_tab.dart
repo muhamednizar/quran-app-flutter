@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/core/Utils/assets_manager.dart';
-import 'package:quran_app/core/Utils/colors_manager.dart';
 import 'package:quran_app/presentation/Home/tabs/quran_tab/quran-widgets/quran_title_widget/chapter_name_widget.dart';
 import 'package:quran_app/presentation/Home/tabs/quran_tab/quran-widgets/quran_title_widget/quran_title_widget.dart';
 
@@ -255,7 +254,7 @@ class QuranTab extends StatelessWidget {
                 separatorBuilder: (context, index) => Container(
                   width: double.infinity,
                   height: 3,
-                  color: ColorsManager.goldColor,
+                  color: Theme.of(context).primaryColor,
                 ),
                 itemBuilder: (context, index) => QuranTitleWidget(
                   SuraTitle: suraNames[index],
