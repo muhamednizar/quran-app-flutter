@@ -1,0 +1,18 @@
+{
+  "appTitle": "Islami",
+  "chapterName": "chapter name",
+  "versesNumber": "Verses Number",
+  "quranTab": "Quran",
+  "hadithTab": "Hadith",
+  "sebhaTab": "Sebha",
+  "radioTab": "Radio",
+  "settingsTab": "Settings",
+  "hadith": "El-ahadith",
+  "theme": "Theme",
+  "language": "Language",
+  "light": "Light",
+  "dark": "Dark",
+  "english": "English",
+  "arabic": "العربيه",
+  "tasbihCount": "count of tasbihat"
+}

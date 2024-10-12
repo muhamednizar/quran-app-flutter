@@ -254,7 +254,7 @@ class QuranTab extends StatelessWidget {
                 separatorBuilder: (context, index) => Container(
                   width: double.infinity,
                   height: 3,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).dividerColor,
                 ),
                 itemBuilder: (context, index) => QuranTitleWidget(
                   SuraTitle: suraNames[index],

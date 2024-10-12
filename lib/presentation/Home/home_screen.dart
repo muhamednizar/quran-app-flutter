@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:quran_app/config/theme/my_theme.dart';
 import 'package:quran_app/core/Utils/assets_manager.dart';
-import 'package:quran_app/core/Utils/strings_manager.dart';
 import 'package:quran_app/presentation/Home/tabs/hadith_tab/hadith_tab.dart';
 import 'package:quran_app/presentation/Home/tabs/quran_tab/quran_tab.dart';
 import 'package:quran_app/presentation/Home/tabs/radio_tab/radio_tab.dart';
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   : AssetsManager.lightMainBg),
               fit: BoxFit.fill)),
       child: Scaffold(
-        appBar: AppBar(title: const Text(StringManager.appTitle)),
+        appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle)),
         bottomNavigationBar: Theme(
           data: Theme.of(context)
               .copyWith(canvasColor: Theme.of(context).primaryColor),
@@ -47,34 +47,34 @@ class _HomeScreenState extends State<HomeScreen> {
               });
             },
             currentIndex: selectedIndex,
-            items: const [
+            items: [
               BottomNavigationBarItem(
                 icon: ImageIcon(
                   AssetImage(
                     AssetsManager.lightQuranIcon,
                   ),
                 ),
-                label: StringManager.quranLabel,
+                label: AppLocalizations.of(context)!.quranTab,
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(
                   AssetImage(AssetsManager.lightHadeth),
                 ),
-                label: StringManager.hadithLabel,
+                label: AppLocalizations.of(context)!.hadithTab,
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(
                   AssetImage(AssetsManager.lightSebha),
                 ),
-                label: StringManager.tasbehLabel,
+                label: AppLocalizations.of(context)!.sebhaTab,
               ),
               BottomNavigationBarItem(
-                  label: StringManager.radioLabel,
+                  label: AppLocalizations.of(context)!.radioTab,
                   icon: ImageIcon(
                     AssetImage(AssetsManager.lightRadio),
                   )),
               BottomNavigationBarItem(
-                label: StringManager.settingsLabel,
+                label: AppLocalizations.of(context)!.settingsTab,
                 icon: Icon(Icons.settings),
               ),
             ],

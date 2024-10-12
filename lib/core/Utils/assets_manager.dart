@@ -9,4 +9,5 @@ class AssetsManager {
   static const String lightRadio = 'assets/images/icon_radio.png';
   static const String lightQuranLogo = 'assets/images/quran_screen_logo.png';
   static const String lightHadeethLogo = 'assets/images/hadeth_logo.png';
+  static const String lightsebhaLogo = 'assets/images/body_sebha_light.png';
 }

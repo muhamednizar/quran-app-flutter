@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChapterNameWidget extends StatelessWidget {
   const ChapterNameWidget({super.key});
@@ -10,7 +11,7 @@ class ChapterNameWidget extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
           border: Border.symmetric(
-        horizontal: BorderSide(color: Theme.of(context).primaryColor, width: 5),
+        horizontal: BorderSide(color: Theme.of(context).dividerColor, width: 5),
       )),
       child: IntrinsicHeight(
         child: Row(
@@ -22,7 +23,7 @@ class ChapterNameWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4),
                   child: Text(
-                    'Chapter Name',
+                    AppLocalizations.of(context)!.chapterName,
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
@@ -33,7 +34,7 @@ class ChapterNameWidget extends StatelessWidget {
             Expanded(
                 flex: 1,
                 child: VerticalDivider(
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).dividerColor,
                   width: 2,
                   thickness: 3,
                 )),
@@ -42,7 +43,7 @@ class ChapterNameWidget extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 4),
                   child: Text(
-                    'Number of Verses',
+                    AppLocalizations.of(context)!.versesNumber,
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
