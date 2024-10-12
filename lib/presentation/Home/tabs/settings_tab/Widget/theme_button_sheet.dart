@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class ThemeButtonSheet extends StatelessWidget {
+class ThemeButtonSheet extends StatefulWidget {
   const ThemeButtonSheet({super.key});
 
+  @override
+  State<ThemeButtonSheet> createState() => _ThemeButtonSheetState();
+}
+
+class _ThemeButtonSheetState extends State<ThemeButtonSheet> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,29 +16,33 @@ class ThemeButtonSheet extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Light',
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-              Icon(
-                Icons.check,
-                size: 25,
-              )
-            ],
-          ),
+          buildSelectedThemeItem(AppLocalizations.of(context)!.light),
           SizedBox(
             height: 20,
           ),
-          Text(
-            'Dark',
-            style: Theme.of(context)
-                .textTheme.displayMedium,
-          ),
+          buildUnSelectedThemeItem(AppLocalizations.of(context)!.dark),
         ],
       ),
     );
+  }
+
+  Widget buildSelectedThemeItem(String text) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          text,
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+        Icon(
+          Icons.check,
+          size: 25,
+        )
+      ],
+    );
+  }
+
+  Widget buildUnSelectedThemeItem(String text) {
+    return Text(text, style: Theme.of(context).textTheme.displayMedium);
   }
 }

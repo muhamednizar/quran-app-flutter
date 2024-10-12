@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:quran_app/presentation/Home/tabs/settings_tab/Widget/language_button_sheet.dart';
 import 'package:quran_app/presentation/Home/tabs/settings_tab/Widget/theme_button_sheet.dart';
 
@@ -14,7 +15,7 @@ class SettingsTab extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Theme',
+              AppLocalizations.of(context)!.theme,
               style: Theme.of(context).textTheme.labelSmall,
             ),
             SizedBox(
@@ -28,18 +29,19 @@ class SettingsTab extends StatelessWidget {
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
                       border: Border.all(
-                          color: Theme.of(context).primaryColor, width: 3),
+                          color: Theme.of(context).colorScheme.secondary,
+                          width: 3),
                       borderRadius: BorderRadius.circular(13)),
                   child: Text(
-                    'Light',
-                    style: Theme.of(context).textTheme.displaySmall,
+                    AppLocalizations.of(context)!.light,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   )),
             ),
             SizedBox(
               height: 30,
             ),
             Text(
-              'Language',
+              AppLocalizations.of(context)!.language,
               style: Theme.of(context).textTheme.labelSmall,
             ),
             SizedBox(
@@ -53,11 +55,12 @@ class SettingsTab extends StatelessWidget {
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
                       border: Border.all(
-                          color: Theme.of(context).primaryColor, width: 3),
+                          color: Theme.of(context).colorScheme.secondary,
+                          width: 3),
                       borderRadius: BorderRadius.circular(13)),
                   child: Text(
-                    'English',
-                    style: Theme.of(context).textTheme.displaySmall,
+                    AppLocalizations.of(context)!.english,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   )),
             )
           ],

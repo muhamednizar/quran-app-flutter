@@ -32,7 +32,7 @@ class QuranTitleWidget extends StatelessWidget {
             )),
             Expanded(
                 child: VerticalDivider(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).dividerColor,
               width: 3,
               thickness: 3,
             )),

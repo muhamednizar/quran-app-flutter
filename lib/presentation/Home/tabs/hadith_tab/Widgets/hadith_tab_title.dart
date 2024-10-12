@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/Utils/strings_manager.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithTabTitle extends StatelessWidget {
   const HadithTabTitle({super.key});
@@ -15,7 +14,7 @@ class HadithTabTitle extends StatelessWidget {
               horizontal:
                   BorderSide(color: Theme.of(context).dividerColor, width: 3))),
       child: Text(
-        StringManager.hadithTabTitle,
+        AppLocalizations.of(context)!.hadith,
         style: Theme.of(context).textTheme.bodySmall,
       ),
     );

@@ -3,8 +3,12 @@ import 'package:quran_app/core/Utils/colors_manager.dart';
 import 'package:quran_app/core/Utils/fonts_manager.dart';
 
 class MyTheme {
-  static bool isDarkEnabled = true;
+  static bool isDarkEnabled = false;
   static final ThemeData lightTheme = ThemeData(
+      colorScheme: ColorScheme.fromSeed(
+          seedColor: ColorsManager.goldColor,
+          primary: ColorsManager.goldColor,
+          secondary: ColorsManager.goldColor),
       primaryColor: ColorsManager.goldColor,
       scaffoldBackgroundColor: Colors.transparent,
       appBarTheme: AppBarTheme(
@@ -13,8 +17,8 @@ class MyTheme {
           elevation: 0,
           backgroundColor: Colors.transparent,
           titleTextStyle: TextStyle(
-            color: Colors.black,
-            fontSize: 25,
+              color: Colors.black,
+              fontSize: 25,
               fontFamily: FontsManager.elmesiri)),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedItemColor: Colors.black,
@@ -33,11 +37,11 @@ class MyTheme {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
       dividerColor: ColorsManager.goldColor,
       textTheme: TextTheme(
-        bodySmall: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.w400,
-        ),
-        titleSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+          bodySmall: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w400,
+          ),
+          titleSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
           displaySmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           labelSmall: TextStyle(
               fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
@@ -57,6 +61,10 @@ class MyTheme {
       iconTheme: IconThemeData(color: ColorsManager.goldColor, size: 30));
 
   static final ThemeData darkTheme = ThemeData(
+      colorScheme: ColorScheme.fromSeed(
+          seedColor: ColorsManager.goldColor,
+          primary: ColorsManager.darkblue,
+          secondary: Colors.white),
       primaryColor: ColorsManager.darkblue,
       scaffoldBackgroundColor: Colors.transparent,
       appBarTheme: AppBarTheme(
