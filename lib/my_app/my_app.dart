@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/provider.dart';
 import 'package:quran_app/config/theme/my_theme.dart';
 import 'package:quran_app/core/Utils/routes_manager.dart';
 import 'package:quran_app/presentation/Home/splash_screen.dart';
 import 'package:quran_app/presentation/Home/tabs/hadith_tab/hadithDetails/hadith_details.dart';
 import 'package:quran_app/presentation/Home/tabs/quran_tab/quran_details/quran_details_screen.dart';
+import 'package:quran_app/provider/settings_provider.dart';
 
 import '../presentation/Home/home_screen.dart';
 
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingsProvider>(context, listen: true);
     return MaterialApp(
       localizationsDelegates: [
         AppLocalizations.delegate,
@@ -25,8 +28,8 @@ class MyApp extends StatelessWidget {
         Locale('en'), // English
         Locale('ar'), // arabic
       ],
-      locale: Locale('en'),
-      routes: {
+        locale: Locale(provider.currentLanguage),
+        routes: {
         RoutesManager.homeRoute: (_) => HomeScreen(),
         RoutesManager.splashRoute: (_) => SplashScreen(),
         RoutesManager.QuranDetailsRoute: (_) => QuranDetailsScreen(),
@@ -35,7 +38,6 @@ class MyApp extends StatelessWidget {
       initialRoute: RoutesManager.splashRoute,
       theme: MyTheme.lightTheme,
       darkTheme: MyTheme.darkTheme,
-      themeMode: ThemeMode.light,
-    );
+        themeMode: provider.currentTheme);
   }
 }
