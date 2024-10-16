@@ -3,7 +3,7 @@ import 'package:quran_app/core/Utils/colors_manager.dart';
 import 'package:quran_app/core/Utils/fonts_manager.dart';
 
 class MyTheme {
-  static bool isDarkEnabled = false;
+  // static bool isDarkEnabled = false;
   static final ThemeData lightTheme = ThemeData(
       colorScheme: ColorScheme.fromSeed(
           seedColor: ColorsManager.goldColor,

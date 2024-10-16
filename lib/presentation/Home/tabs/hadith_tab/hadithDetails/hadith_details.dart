@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/config/theme/my_theme.dart';
+import 'package:provider/provider.dart';
 import 'package:quran_app/presentation/Home/tabs/hadith_tab/hadith_tab.dart';
 
-import '../../../../../core/Utils/assets_manager.dart';
+import '../../../../../provider/settings_provider.dart';
 
 class HadithDetails extends StatelessWidget {
   const HadithDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingsProvider>(context);
     HadithItem hadith =
         ModalRoute.of(context)?.settings.arguments as HadithItem;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(MyTheme.isDarkEnabled
-                  ? AssetsManager.darkMainBg
-                  : AssetsManager.lightMainBg),
+              image: AssetImage(provider.getBackgroundImage()),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
